@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome !</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<header>
+			<h1>FILEHOSTING</h1>
+			<div id="dlogin">
+				<form action="/authentification" method="POST">
+					<input type="text" name="username" placeholder="username" required/>
+					<input type="password" name="password" placeholder="password" required/>
+					<input type="submit" value="Login" />
+				</form>
+			</div>
+		</header>
+		<div id="information"><%= mess_info %></div>
+		<div id="global">
+			<div id="dilogo"><img src="/files/free_filesup.png" alt="img_file"/>
+				<p>Store your files online !</p>
+			</div>
+			<div id="dsignup">
+				<form action="/registering" method="POST">
+					<fieldset>
+						<legend>Register now!</legend>
+						<input type="text" name="username" placeholder="username"required/>
+						<input type="password" name="password" placeholder="password" required/>
+						<input type="submit" value="Register" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<footer>
+			<p>@Simple hosting files like</p>
+		</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<header>
+			<h1>FILEHOSTING - Welcome <%= username %> !</h1>
+		</header>
+		<button id="blogout"><a href="/logout">Log out</a></button>
+		<div id="dupload_file">
+			<form action="/uploading" method="POST" enctype="multipart/form-data">
+				<fieldset>
+					<legend>Upload your files</legend>
+					<input type="file" id="upfile" name="upfile" value="Choose file"/>
+					<input type="submit" value="Upload!" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="dshow_files">
+			<table id="tfiles">
+				<tr>
+					<th>N.:</th>
+					<th>file_name</th>
+					<th>file_ext</th>
+					<th>file_size</th>
+					<th>file_date</th>
+					<th> - X - </th>
+				</tr>
+				<% var i = 0; while (listfiles[i]) { %>
+					<tr>
+						
+						<td><%= listfiles[i][0] %></td>
+						<td><a href="public/files/<%= listfiles[i][1].filepath %>"><%= listfiles[i][1].filename %></a></td>
+						<td><%= listfiles[i][1].fileext %></td>
+						<td><%= listfiles[i][1].filesize %></td>
+						<td><%= listfiles[i][1].datefile %></td>
+						<td><a href="/deletefile/<%= listfiles[i][1].filepath %>">Remove</a></td>
+						
+					</tr>
+				<% i++; } %>
+			</table>
+		</div>
+		<footer>
+			<p>@Simple hosting files like</p>
+		</footer>
+</body>
+</html>

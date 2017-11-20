@@ -1,0 +1,23 @@
+{
+  "name": "Project_HostingFiles",
+  "version": "0.0.1",
+  "description": "Hosting files like",
+  "author": "jgonneau",
+  "mail" : "gonneau.jeanpaul@j-p.work",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "connect-redis": "^3.3.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "mongoose": "^4.13.1",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "redis": "^2.8.0"
+  }
+}
